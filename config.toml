@@ -1,0 +1,4 @@
+baseURL = 'http://lioncityhotclub.com/'
+languageCode = 'en-us'
+title = 'Lion City Hot Club'
+theme = 'hugo-theme-shell-master'

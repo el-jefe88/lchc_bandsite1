@@ -1,0 +1,78 @@
+baseURL = "https://www.lioncityhotclub.com/"
+title = "Shell"
+# author = "Yukuro"
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+[Params]
+  # Note: This is for the meta description, which is different from the "description" displayed in the terminal.
+  description = "Lion City Hot Club"
+  [Params.Terminal]
+  # Note: color schema
+  # Note: You can choose between
+  # Note: ["monokai", "powershell", "gruvbox_light", "gruvbox_dark", "solarized_light", "solarized_dark", "ubuntu", "retro"]
+  # Note: If you want to use the Goph theme, set it to "goph" (See README.md)
+  schema = "retro"
+
+  # Note: in terminal
+  # [userName]@[pcName]:~/$ cd [workDir]
+  # [userName]@[pcName]:~/[workDir]$ cat [profile]
+  #
+  # [description]
+  #
+  # Note: if you set Params.Tree > use = true
+  # [userName]@[pcName]:~/[workDir]$ tree ./[folderName]/
+  # ./[folderName]/
+  # ...
+  # Note: result of the tree command
+  userName = "lchc"
+  pcName = "lioncityhotclub"
+  workDir = "mydir"
+  profile = "about us.txt"
+
+  # Note: speed at which text is displayed on the terminal
+  # Note: if set to 0, typing animation will be disabled
+  # Note:
+  # Note: if you want to enable Mathjax, you need to set it to 0
+  # Note: and set "math: true" at front matter in your Markdown file
+  terminalDelay = 20
+
+  # Note: speed at which text is displayed on the activity pages
+  # Note: if set to 0, typing animation will be disabled
+  # Note:
+  # Note: if you want to enable Mathjax, you need to set it to 0
+  # Note: and set "math: true" at front matter in your Markdown file
+  activityDelay = 5
+
+  description = """
+
+  This is the website for the Lion City Hot Club.
+  We make music: Jazz, Gypsy and otherwise mostly.
+
+  Created in Singapore.
+
+  lioncityhotclub at gmail dot com
+
+  """
+
+  # Note: If you want to use a Markdown file, you can use the following
+  # description = "/description.md"
+  # Note: and put the description.md in /content/description.md
+
+  [Params.Tree]
+  use = true
+  folderName = "my_activity"
+  # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
+  files = [
+    ["YouTube", "https://www.youtube.com//channel/UC7SIT1s8ism69dB6VwngSLg"],
+    ["Instagram", "https://www.instagram.com/lioncityhotclub"],
+    ["Facebook", "https://www.facebook.com/lioncityhotclub/"],
+    ["Twitch", "/post/some-activity.md"],
+    ["TikTok", "/post/some-activity.md"],
+  ]
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.85.0"
